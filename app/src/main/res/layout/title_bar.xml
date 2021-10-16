@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!--
+        公共的返回键+标题栏界面
+        这里的背景可变化，所以设置成黑色背景
+        -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_bar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+   android:background="@android:color/transparent">
+    <!--
+    显示返回键（箭头图片）
+    layout_centerVertical：图片水平居中
+    layout_alignParentLeft：左浮显示
+    background：设置背景是否为按下
+    transparent:颜色透明
+    -->
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/go_back_selector" />
+    <!--
+    界面文本标题
+    layout_centerInParent：文本居中显示
+    -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>

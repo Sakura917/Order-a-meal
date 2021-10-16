@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <!--
+        由于上方的图片也需要和下面的列表一起滑动，
+        所以需要添加：ScrollView(滚动条)
+        include：引入标题栏;
+        scaleType="fitXY"：将原图进行横方向（即XY方向）拉伸;
+        -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+    <include layout="@layout/title_bar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFB6C1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/banner" />
+            <!--fill_parent:强制性布满整个屏幕
+                列表左右边距为8,第一个列表的上边距为8
+                scrollbars="none"：无滚动条
+                dividerHeight="8dp"：列表与列表上下的间距
+                使用自定义控件ShopListView
+            -->
+            <cn.itcast.order.views.ShopListView
+                android:id="@+id/slv_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:dividerHeight="8dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
